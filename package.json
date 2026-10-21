@@ -1,6 +1,6 @@
 {
 	"name": "word-count-property",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"private": true,
 	"description": "Write word count and reading time properties to notes you choose, for sorting in Bases.",
 	"main": "main.js",

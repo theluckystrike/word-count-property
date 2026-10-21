@@ -2,6 +2,7 @@ import { PluginSettingTab, type SettingDefinitionItem } from 'obsidian';
 import { fillAccountSetting } from './license/github-obsidian';
 import type WordCountPropertyPlugin from './main';
 import { PRO_UI, SPONSOR_MONTHLY_URL, SPONSOR_ONE_TIME_URL } from './pro';
+import { helloSettingItems } from './hello/settings';
 
 export interface WordCountPropertySettings {
 	countRenderedText: boolean;
@@ -27,6 +28,11 @@ export class WordCountPropertySettingTab extends PluginSettingTab {
 	}
 
 	getSettingDefinitions(): SettingDefinitionItem[] {
+		// The product rows, then the "More from NoteMods" card (packages/hello).
+		return [...this.productSettingDefinitions(), ...helloSettingItems()];
+	}
+
+	productSettingDefinitions(): SettingDefinitionItem[] {
 		return [
 			{
 				name: 'Get pro',

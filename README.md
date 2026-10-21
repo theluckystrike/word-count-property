@@ -40,7 +40,7 @@ Preview options are saved in this vault. They affect only the preview notice. Ev
 
 ## Install
 
-When the listing is available, open Settings in the app, choose Community plugins, then Browse. Search for “Word Count Property”, install it and enable it. The Bases core plugin must also be enabled to build a Bases view.
+Open Settings in the app, choose Community plugins, then Browse. Search for “Word Count Property”, install it and enable it. The Bases core plugin must also be enabled to build a Bases view.
 
 To install by hand, download `main.js`, `manifest.json` and `styles.css` from one release. Put them in `<vault>/.obsidian/plugins/word-count-property/`, reload the plugin list and enable Word Count Property.
 
@@ -71,6 +71,8 @@ Frontmatter updates use the Obsidian core API. It can normalize YAML comments, q
 The example view in `docs/sample-notes/Word Count Board.base` shows these fields in a table of tracked chapters.
 
 ## Settings
+
+After a minor or major update, this plugin opens one What's new tab in the background. The tab and settings card suggest other NoteMods plugins and Zovo Chat and link to notemods.com for feedback ([privacy](https://notemods.com/privacy/)). The tab sends no data. Turn the tab off in Settings.
 
 The Pro section contains the rendered-preview toggle, disabled until GitHub Sponsors confirms Pro. The code-preview toggle appears only when Pro and rendered preview are on. Settings shows the $15 one-time link while Pro is off. After a sponsorship, select “Sign in with GitHub”, then select Refresh if needed.
 
