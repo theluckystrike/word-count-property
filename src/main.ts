@@ -3,7 +3,7 @@ import { createGitHubSponsors } from './license/github-obsidian';
 import type { SponsorsManager } from './license/index';
 import { deriveStats } from './count';
 import { DEFAULT_SETTINGS, WordCountPropertySettingTab, normalizeSettings, type WordCountPropertySettings } from './settings';
-import { bindPro, SPONSORS } from './pro';
+import { bindPro, proNotice, SPONSORS } from './pro';
 import { changeTracking, hasConflict, hasStats, isTracked, writeStats, type TrackingChange } from './tracking';
 import { setupHello } from './hello/index';
 import WHATS_NEW from './whats-new.json';
@@ -49,7 +49,7 @@ export default class WordCountPropertyPlugin extends Plugin {
 			id: 'reading-preview',
 			name: 'Show local reading preview',
 			editorCallback: (editor) => {
-				if (!this.isPro()) { new Notice('Local reading preview requires a sponsorship. Stored properties are free.'); return; }
+				if (!this.isPro()) { proNotice('Local reading preview needs Pro. Stored properties are free.'); return; }
 				const stats = deriveStats(editor.getValue(), this.settings.countRenderedText ? 'rendered' : 'source', this.settings.includeCodeBlocks);
 				new Notice(`Local preview: ${stats.wordCount} words, ${stats.readingTimeMinutes} min read. Stored properties use source counting.`);
 			},

@@ -1,4 +1,5 @@
 import type { SponsorsConfig, SponsorsManager } from './license/index';
+import { showProNotice } from './license/github-obsidian';
 
 export const SPONSOR_MONTHLY_URL = 'https://github.com/sponsors/theluckystrike?metadata_source=word-count-property';
 export const SPONSOR_ONE_TIME_URL = 'https://github.com/sponsors/theluckystrike/sponsorships?tier_id=666162&metadata_source=word-count-property';
@@ -25,4 +26,9 @@ export function bindPro(pro: SponsorsManager | null): void {
 
 export function isPro(): boolean {
 	return manager?.isPro() ?? false;
+}
+
+/** Shows the shared Pro notice: the lead, then the next step for this user. A free user gets a Sponsor on GitHub button. */
+export function proNotice(lead: string): void {
+	showProNotice(manager, lead);
 }
