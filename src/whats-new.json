@@ -1,8 +1,9 @@
 {
 	"id": "word-count-property",
 	"name": "Word Count Property",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"changes": [
+		"The Pro notice of Word Count Property now says that one payment turns on Pro in every NoteMods plugin.",
 		"The Word Count Property notice for a Pro feature now has a Sponsor on GitHub button."
 	],
 	"tip": "In a Bases table, add wordCount and readingTimeMinutes as columns to sort and sum your chapters.",
