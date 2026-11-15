@@ -39,11 +39,11 @@ export class WordCountPropertySettingTab extends PluginSettingTab {
 				visible: () => !this.plugin.isPro(),
 				render: (setting) => {
 					const fragment = createFragment();
-					fragment.append(document.createTextNode(`${PRO_UI.proSummary} ${PRO_UI.priceText} `));
+					fragment.append(fragment.doc.createTextNode(`${PRO_UI.proSummary} ${PRO_UI.priceText} `));
 					const oneTime = createEl('a');
 					oneTime.href = SPONSOR_ONE_TIME_URL;
 					oneTime.textContent = '$15 one time';
-					fragment.append(oneTime, document.createTextNode(' or '));
+					fragment.append(oneTime, fragment.doc.createTextNode(' or '));
 					const monthly = createEl('a');
 					monthly.href = SPONSOR_MONTHLY_URL;
 					monthly.textContent = '$5 a month';
